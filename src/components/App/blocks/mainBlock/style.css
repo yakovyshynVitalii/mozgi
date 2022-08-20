@@ -1,0 +1,136 @@
+.main-block {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: #bebebe;
+  overflow: hidden;
+}
+
+.bg-elements .circle {
+  position: absolute;
+  top: calc(50% - 289px);
+  left: calc(50% - 289px);
+  z-index: 2;
+
+  width: 578px;
+  height: 578px;
+
+  border-radius: 50%;
+
+  background: #ffcb46;
+  filter: blur(76px);
+}
+
+.animation-text-block {
+  position: absolute;
+  top: calc(50% - 289px);
+  left: calc(50% - 289px);
+  width: 578px;
+  height: 578px;
+}
+
+.bg-elements .animation-text-1 {
+  display: flex;
+
+  margin-top: 230px;
+  z-index: 1;
+  user-select: none;
+
+  animation: animationText1 14s linear infinite;
+}
+
+.bg-elements .animation-text-2 {
+  display: flex;
+
+  margin-top: 54px;
+  z-index: 1;
+  user-select: none;
+
+  animation: animationText2 14s linear infinite;
+}
+
+@keyframes animationText1 {
+  0% {
+    transform: rotate(150deg) translateX(-200%);
+  }
+
+  100% {
+    transform: rotate(150deg) translateX(-500%) translateY(0);
+  }
+}
+
+@keyframes animationText2 {
+  0% {
+    transform: rotate(-30deg) translateX(-200%) translateY(0);
+  }
+
+  100% {
+    transform: rotate(-30deg) translateX(-500%) translateY(0);
+  }
+}
+
+.content-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+
+  z-index: 3;
+}
+
+/* --- Tablet --- */
+
+@media screen and (max-width: 1024px) {
+  .bg-elements .circle,
+  .animation-text-block {
+    top: calc(50% - 241px);
+    left: calc(50% - 241px);
+
+    width: 482px;
+    height: 482px;
+  }
+
+  .bg-elements .animation-text-1 {
+    margin-top: 200px;
+  }
+
+  .bg-elements .animation-text-2 {
+    margin-top: 60px;
+  }
+}
+
+/* --- mobile --- */
+
+@media screen and (max-width: 620px) {
+  .bg-elements .circle,
+  .animation-text-block {
+    top: calc(50% - 147px);
+    left: calc(50% - 147px);
+
+    width: 294px;
+    height: 294px;
+  }
+
+  .bg-elements .circle {
+    background: #ffcb46;
+    filter: blur(46.3568px);
+  }
+
+  .bg-elements .animation-text-1 {
+    margin-top: 100px;
+  }
+
+  .bg-elements .animation-text-2 {
+    margin-top: 30px;
+  }
+
+  .bg-elements .animation-text-1 img,
+  .bg-elements .animation-text-2 img {
+    height: 30px;
+  }
+}

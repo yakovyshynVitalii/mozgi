@@ -1,0 +1,51 @@
+.language-select {
+  position: relative;
+}
+
+.language-select__btn {
+  position: relative;
+  z-index: 15;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background: #bebebe;
+
+  cursor: pointer;
+}
+
+.select-item {
+  position: absolute;
+  top: 2px;
+  left: 80%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 34px;
+
+  background: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+
+  pointer-events: none;
+  opacity: 0;
+  user-select: none;
+  transition: 0.4s;
+}
+
+.language-select:hover .select-item {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+}

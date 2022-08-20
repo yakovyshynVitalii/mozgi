@@ -1,0 +1,42 @@
+.title-1 {
+  font-family: "Grtsk Giga";
+  font-style: normal;
+  font-weight: 700;
+  font-size: min(82px, 5.8571vw);
+  line-height: min(90px, 6.428vw);
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-1 {
+  font-family: "Grtsk Giga";
+  font-style: normal;
+  font-weight: 600;
+  font-size: min(16px, 1.1428vw);
+  line-height: min(22px, 1.5714vw);
+  text-align: center;
+}
+
+/* --- tablet --- */
+
+@media screen and (max-width: 1024px) {
+  .title-1 {
+    font-size: 58px;
+    line-height: 64px;
+  }
+
+  .text-1 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* --- mobile --- */
+
+@media screen and (max-width: 620px) {
+  .title-1 {
+    font-size: 34px;
+    line-height: 110%;
+  }
+}
